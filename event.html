@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jquery UI</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<style>
+		 #dialog label, #dialog input { display:block; }
+  #dialog label { margin-top: 0.5em; }
+  #dialog input, #dialog textarea { width: 95%; }
+  #tabs { margin-top: 1em; }
+  #tabs li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
+  #add_tab { cursor: pointer; }
+  .{
+  	z-index: 10;
+  }
+	</style>
+</head>
+
+
+<body>
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1 class="display-4">Widget</h1>
+	    <p class="lead">Widgets are feature-rich, stateful plugins that have a full life-cycle, along with methods and events. We need this for our website atracting more and more. </p>
+	    <ul class="list-unstyled">
+	    	<li><a href="#accordion-widget">Accordion</a></li>
+	    	<li><a href="#autocomplete-widget">Autocomplete</a></li>
+	    	<li><a href="#datepicker">Datepicker</a></li>
+	    	<li><a href="#progressbar-widget">Progressbar</a></li>
+	    	<li><a href="#selectmenu">Select menu</a></li>
+	    	<li><a href="#slider-widget">Slider</a></li>
+	    	<li><a href="#spinner">Spinner</a></li>
+	    	<li><a href="#tabs_widget">Tabs</a></li>
+	    	<li><a href="#tooltip_widget">Tooltip</a></li>
+	    </ul>
+	  </div>
+	</div>
+	<article class="my-3" id="accordion-widget">
+		<div class="container">
+			<div class="row">
+				
+			    <div class="bd-heading  align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+				    <h3>Accordion</h3>
+				</div>
+				<div class="col-md-8">
+					<div id="accordion">
+					  <h3>Section 1</h3>
+					  <div>
+					    <p>
+					    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+					    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+					    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+					    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+					    </p>
+					  </div>
+					  <h3>Section 2</h3>
+					  <div>
+					    <p>
+					    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+					    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+					    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+					    suscipit faucibus urna.
+					    </p>
+					  </div>
+					  <h3>Section 3</h3>
+					  <div>
+					    <p>
+					    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+					    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+					    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+					    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+					    </p>
+					    <ul>
+					      <li>List item one</li>
+					      <li>List item two</li>
+					      <li>List item three</li>
+					    </ul>
+					  </div>
+					  <h3>Section 4</h3>
+					  <div>
+					    <p>
+					    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+					    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+					    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+					    mauris vel est.
+					    </p>
+					    <p>
+					    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+					    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+					    inceptos himenaeos.
+					    </p>
+					  </div>
+					</div> 
+
+				</div>
+			</div>
+		</div>
+	</article>
+	<article class="my-3" id="autocomplete-widget">
+		<div class="container">
+			<div class="row">
+				
+			    <div class="bd-heading  align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+				    <h3>Autocomplete tags</h3>
+				</div>
+				<div class="col-lg-8">
+					<div class="ui-widget">
+					  <label for="tags">Tag programming languages: </label>
+					  <input id="tags" placeholder="tags" type="text" class="form-control">
+					  <input type="text" id="datepicker" placeholder="select date" value="" class="form-control">	
+					</div>
+				</div>
+				</div>
+				</div>	
+	</article>
+	<style>
+		#progressbar {
+    margin-top: 20px;
+  }
+ 
+  .progress-label {
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+  }
+ 
+  .ui-dialog-titlebar-close {
+    display: none;
+  }
+	</style>
+	<article id="progressbar-widget">
+		<div class="container">
+			<div class="row">
+				<div class="bd-heading  align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+				    <h3>Progressbar widget</h3>
+				    <p>This will show us progress reports</p>
+				</div>
+				<div class="col-md-6">
+					<div id="progress-dialog" title="File Download">
+					  <div class="progress-label">Please wait file will Start downloading...</div>
+					  <div id="progressbar"></div>
+					</div>
+					<button id="downloadButton">Start Download</button>
+
+
+				</div>
+				<div class="col-md-6"></div>
+			</div>
+		</div>
+	</article>
+	<article id="selectmenu" class="my-5">
+	<div class="container">
+		<div class="row">
+			<div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+			    <h3>Select Menu</h3>
+			    <p>Click on anything value will show it</p>
+			</div>
+			<div class="col-md-6">
+				<div id="selectedval"></div>
+				 <select name="color" id="color">
+				      <option value="black">Black</option>
+				      <option value="red">Red</option>
+				      <option value="yellow" selected="selected">Yellow</option>
+				      <option value="blue">Blue</option>
+				      <option value="green">Green</option>
+				  </select>
+			</div>
+			<div class="col-md-6">
+				<div id="resizable2" class="ui-widget-content">
+				  <h3 class="ui-widget-header">Jquery Helper</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	</article>
+	<article id="slider-widget" class="my-5">
+		<div class="container">
+			<div class="row">
+				<div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+				    <h3>Slider</h3>
+				</div>
+				<div class="col-md-6">
+					<p>
+					  <label for="amount">Price range:</label>
+					  <div id="amount"></div>
+<!-- 					  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+ -->					</p>
+					 
+					<div id="slider-range"></div>
+				</div>
+				<div class="col-md-6">
+					<p id="feedback">
+						vertical range slider
+					</p>
+					<p>
+					  <label for="amount">Target sales goal (Millions):</label>
+					  <div id="v_amount"></div>
+					  <!-- <input type="text" id="v_amount" readonly style="border:0; color:#f6931f; font-weight:bold;"> -->
+					</p>
+					<div id="slider-range1" style="height:200px"></div>
+				</div>
+			</div>
+		</div>
+	</article>
+	<article id="spinner" class="my-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+				<!-- <div class="bd-heading  align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"> -->
+				    <h3>Spinner</h3>
+				    <p>The Spinner, or number stepper widget, is perfect for handling all kinds of numeric input. It allows users to type a value directly, or modify an existing value by spinning with the keyboard, mouse or scrollwheel. When combined with Globalize, you can even spin currencies and dates in a variety of locales.Spinner wraps a text input with two buttons to increment and decrement the current value. Key events are added so that the same incrementing and decrementing can be done with the keyboard. Spinner delegates to Globalize for number formatting and parsing.
+					</p>
+
+					<input type="text" id="spinner-btn">
+				</div>
+			</div>
+		</div>
+	</article>
+	<article id="tabs_widget" class="my-5">
+		<div class="container">
+			<div class="row">
+				<div class="bd-heading  align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+				    <h3>Tabs</h3>
+				    <p>Tabs are generally used to break content into multiple sections that can be swapped to save space, much like an accordion.Tabs have a particular set of markup that must be used in order for them to work properly</p>
+				</div>
+				<div class="col-md-6">
+					<div id="tabs">
+					  <ul>
+					    <li><a href="#fragment-1">One</a></li>
+					    <li><a href="#fragment-2">Two</a></li>
+					    <li><a href="#fragment-3">Three</a></li>
+					  </ul>
+					  <div id="fragment-1">
+					  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda sint error reiciendis voluptatem mollitia, similique, fugiat non molestiae ab neque, sed sequi cupiditate recusandae incidunt ipsum accusantium, dicta necessitatibus. Possimus!</div>
+					  <div id="fragment-2">
+					  	Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Veritatis numquam sequi ipsa, cum rerum! Dignissimos consectetur praesentium, magnam impedit quia itaque eos odio sunt similique doloribus et nam quidem atque.
+					    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					  </div>
+					  <div id="fragment-3">
+					  	Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Quibusdam omnis praesentium, ipsam. Exercitationem eaque, autem nulla ab neque odit iusto nemo minima tempora, fuga dicta eos mollitia laudantium omnis dolorem.
+					    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					
+				<div id="dialog" title="Tab data">
+				  <form>
+				    <fieldset class="ui-helper-reset">
+				      <label for="tab_title">Title</label>
+				      <input type="text" name="tab_title" id="tab_title" value="Tab Title" class="ui-widget-content ui-corner-all">
+				      <label for="tab_content">Content</label>
+				      <textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all">Tab content</textarea>
+				    </fieldset>
+				  </form>
+				</div>
+				 
+				<button id="add_tab">Add Tab</button>
+				 
+				<div id="tab-2">
+				  <ul>
+				    <li><a href="#tabs-1">Home</a> <span class="ui-icon ui-icon-close" role="presentation">Remove Tab</span></li>
+				  </ul>
+				  <div id="tabs-1">
+				    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+				  </div>
+				</div>
+				</div>
+				<div class="col-md-6">
+					<h2>Sortable tabs</h2>
+					<div id="tab-3">
+					  <ul>
+					    <li><a href="#home-1">Home</a></li>
+					    <li><a href="#contact-1">Contact</a></li>
+					    <li><a href="#about-1">About</a></li>
+					    <li><a href="#service-1">Service</a></li>
+					  </ul>
+					  <div id="home-1">
+					  	<p>Home</p>
+					    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+					  </div>
+					  <div id="contact-1"><p>contact</p>
+					  	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo ab cum soluta culpa quo earum quisquam facere id? Ea vitae possimus repellendus laborum aliquid nulla officia cupiditate et autem excepturi sunt quas debitis ex non nobis eos expedita, enim corporis. Sunt, aut, dolore. Voluptatem aut unde eligendi, recusandae, eveniet in ad. Beatae numquam totam velit error officiis ill</p>
+					  </div>
+					  <div id="about-1">
+					  	<p>About</p>
+					  	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis odit quod aspernatur maxime nostrum nam autem quo aliquid iste, ipsum cupiditate adipisci voluptatem numquam. Quidem aspernatur unde quia ex inventore, omnis in beatae earum doloribus, sequi! Corrupti asperiores odio, commodi adipisci, dolores aliquam tempora quo pariatur consequuntur voluptatibus est architecto, animi dolor! Eius quo ullam quidem nisi dolore, veniam.</p>
+					  </div>
+					  <div id="service-1">
+					  	<p>service</p>
+					  	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quis velit dolor aperiam, quasi, molestias nobis, porro repudiandae accusamus iusto enim? Quaerat repellendus tempore eligendi ducimus pariatur consequuntur odit nam itaque nihil hic aliquid culpa harum, architecto voluptate, doloremque omnis fuga aperiam cupiditate minima perspiciatis minus. Vel aspernatur, aperiam inventore.</p>
+					  </div>
+					</div>					
+				</div>
+				<div class="col-md-6"></div>
+			</div>
+		</div>
+	</article>
+	
+	<article id="tooltip_widget" class="my-5">
+		<div class="container">
+			<div class="row">
+				<div class="bd-heading  align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+				    <h3>Tooltip</h3>
+				    <p>Tooltips can be attached to any element. When you hover the element with your mouse, the title attribute is displayed in a little box next to the element, just like a native tooltip. </p>
+				</div>
+				<style>
+					.box{
+						width: 100px;
+						height: 100px;
+						border: 1px solid #efefef;
+						background: #ddd;
+						box-shadow: 0 15px 15px rgba(0,0,0,.5);
+						margin-right: 30px;
+						text-align: center;
+						vertical-align: middle;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						position: relative;
+						opacity: 1;
+					}
+					.box .tooltip{opacity: 1;}
+		
+					.ui-tooltip {
+					      padding: 10px 20px;
+					      /*color: white;*/
+					      border-radius: 20px;
+					      font: bold 14px"Helvetica Neue", Sans-Serif;
+					      text-transform: uppercase;
+					      box-shadow: 0 0 7px black;
+					  }
+				</style>
+				<div class="col-md-6">
+					<div class="row flex-wrap">
+						<div class="box">
+							<p class="tooltip" rel="tooltip" title=" <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fugiat esse cum hic blanditiis laudantium, consequuntur aperiam a totam rerum recusandae assumenda repellat minima mollitia, repudiandae dolor laboriosam soluta. Earum.</p>">box 1</p>
+							
+						</div>
+						<div class="box">
+
+							<p class="tooltip" rel="tooltip" title=" <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cumque necessitatibus, inventore sunt, tenetur sequi asperiores ea? Perspiciatis, enim nesciunt nam eveniet praesentium, perferendis corrupti facilis commodi suscipit iusto vel?</p>">box 2</p>
+						</div>
+						<div class="box">
+							<p class="tooltip" rel="tooltip" title=" <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque ducimus libero itaque veniam deserunt tempore nemo voluptas fugit, cumque quia ullam, dolorum aspernatur quibusdam aliquid illum quas eaque atque. Tenetur!</span>">box 3</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					      <div id="target">  
+         <a href="#" class="tooltip-2">Hover over me!</a><br/>  
+         <a href="#" class="tooltip-3">Hover over me too!</a>  
+      </div>  
+
+				</div>	
+				
+			</div>
+		</div>
+	</article>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/tags.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/tab-2.js"></script>
+	<script src="js/progress.js"></script>
+	<script>
+		$( function() {
+			$( "#datepicker" ).datepicker();
+    
+    	$('.tooltip').tooltip({
+    		options: {
+	             content: function () {
+	                 return $(this).prop('title');
+	             }
+	         }
+	     });
+    	$('.tooltip-2').tooltip({  
+               items: 'a.tooltip-2',  
+               content: 'Are you searching for something?<h1>Please feel free to contact us</h1>',  
+               show: "slideDown", // show immediately  
+               open: function(event, ui)  
+               {  
+                  ui.tooltip.hover(  
+                  function () {  
+                     $(this).fadeTo("slow", 0.5);  
+                  });  
+               }  
+        });
+        $('.tooltip-3').tooltip({  
+               items: 'a.tooltip-3',  
+               content: 'Welcome to my website',  
+               show: "fold",   
+               close: function(event, ui)  
+               {  
+                  ui.tooltip.hover(function()  
+                  {  
+                     $(this).stop(true).fadeTo(500, 1);   
+                  },  
+                  function()  
+                  {  
+                     $(this).fadeOut('500', function()  
+                     {  
+                        $(this).remove();  
+                     });  
+                  });  
+               }  
+            });   
+             $( "#tabs" ).tabs({
+             	classes: {
+				    "ui-tabs": "highlight"
+				  },
+				collapsible: true,
+				disabled: [  2 ],
+				// event: "mouseover",
+				// heightStyle: "fill",
+				// hide: { effect: "explode", duration: 1000 },
+				  show: { effect: "blind", duration: 800 }
+
+
+
+             });
+             $("#spinner-btn").spinner();
+             $( "#color" ).selectmenu({
+		       change: function( event, data ) {
+		       	$('#selectedval').html("you have selected this color: "+data.item.value);
+		         // circle.css( "background", data.item.value );
+		       }
+		     });
+		         $( "#accordion" ).accordion({collapsible: true, active: false});
+
+  } );
+
+	</script>
+</body>
+</html>
